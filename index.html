@@ -1,7 +1,83 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Hello World!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png">
+    <title>pakkid test website</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <p>test</p>
+<body class="noselect" oncontextmenu="return false">
+
+    <header id="header">
+        <h1 id="heading-title">pakkid</h1>
+        <nav>
+            <ul>
+                <li><a onclick="scrollSection(1);">Home</a></li>
+                <li><a onclick="scrollSection(2);">About</a></li>
+                <li><a onclick="scrollSection(3);">Projects</a></li>
+                <li><a onclick="scrollSection(4);">Fun Facts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="picky-section" id="section1">
+            <h2>Home</h2>
+            <div class="section-content">
+                <div class="text-section">
+                    <p>Welcome to my space, where tech, creativity, and experimentation meet. Whether it's exploring the latest in VR or designing advanced lighting systems, this page is a showcase of passion-driven projects and ideas. Dive into the world of digital innovation and creative problem-solving.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="section2">
+            <h2>About Me</h2>
+            <div class="section-content">
+                <p>I’m all about blending cutting-edge technology with creative applications. From programming light shows for large-scale events to experimenting with VR and mixed reality, my focus is on pushing the boundaries of what’s possible. I thrive on problem-solving and creating seamless connections between the virtual and real worlds.</p>
+            </div>
+        </section>
+
+        <section id="section3">
+            <h2>Projects</h2>
+            <div class="section-content">
+                <p>Here are some projects I’ve been working on:</p>
+                <ul>
+                    <li>Building a VR application to control real-world lighting systems via the Quest 3.</li>
+                    <li>Designing and programming light shows for school events, blending creativity with technical precision.</li>
+                    <li>Developing new ways to connect lighting rigs with custom-built control systems using Art-Net and OSC protocols.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="section4">
+            <h2>Fun Facts</h2>
+            <div class="section-content">
+                <p>Here are a few things about me:</p>
+                <ul>
+                    <li>I’m always experimenting with new tech setups, including home media servers and custom-built systems.</li>
+                    <li>I have a passion for photography and love capturing the dynamic lighting setups I create.</li>
+                    <li>I'm currently working on a <b>very secret project</b> that may or may not involve school servers—stay tuned!</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 @pakkid GitHub</p>
+        </footer>
+    </main>
+
+    <script>
+        window.addEventListener("load", function() {
+            window.scrollTo(0, 0); // Scroll to top on page load
+        });
+
+        window.history.scrollRestoration = "manual"; // Disable scroll restoration
+    </script>
+    
+    <script src="js/smoothoperator.js"></script>
+    <script src="js/scrollSections.js"></script>
+    <script src="js/hideheader.js"></script>
+
 </body>
+</html>
