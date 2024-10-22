@@ -324,21 +324,6 @@ summary {
 	cursor: pointer
 }
 
-.insta-gallery {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr)
-}
-
-.insta-item {
-	aspect-ratio: 1;
-	margin: .2em;
-	overflow: hidden
-}
-
-.insta-img {
-	object-fit: cover;
-	object-position: center
-}
 
 .col.link {
 	position: relative
