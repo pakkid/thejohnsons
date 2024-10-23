@@ -9,7 +9,7 @@ document.getElementById('copyMinecraftBtn').addEventListener('click', function (
 	e.preventDefault(); // Prevent default action of the anchor tag
 
 	var btn = document.getElementById('copyMinecraftBtn');
-	var originalHTML = '<span class="iconify-inline" data-icon="solar:clipboard-bold"></span>Minecraft Server'; // Set the original button HTML (icon + text)
+	var originalHTML = '<span class="iconify-inline" data-icon="solar:clipboard-bold"></span>Minecraft IP'; // Set the original button HTML (icon + text)
 	var minecraftServerIP = "mc.thejohnsons.net.nz"; // Replace with your actual server IP
 
 	// If the button text is "Copied!", ignore further clicks
