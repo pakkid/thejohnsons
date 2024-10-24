@@ -6,32 +6,33 @@ window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches &
 
 
 document.getElementById('copyMinecraftBtn').addEventListener('click', function (e) {
-	e.preventDefault(); // Prevent default action of the anchor tag
+    e.preventDefault(); // Prevent the default behavior
 
-	var btn = document.getElementById('copyMinecraftBtn');
-	var originalHTML = '<span class="iconify-inline" data-icon="solar:clipboard-bold"></span>Minecraft IP'; // Set the original button HTML (icon + text)
-	var minecraftServerIP = "mc.thejohnsons.net.nz"; // Replace with your actual server IP
+    var btn = document.getElementById('copyMinecraftBtn');
+    var originalHTML = '<span class="iconify-inline" data-icon="solar:clipboard-bold"></span>Minecraft IP'; // Original content (icon + text)
+    var copiedHTML = 'Copied!'; // The content when IP is copied
+    var minecraftServerIP = "mc.thejohnsons.net.nz"; // Replace with your actual server IP
 
-	// If the button text is "Copied!", ignore further clicks
-	if (btn.textContent === "Copied!") {
-		return;
-	}
+    // If button is already showing "Copied!", ignore the click
+    if (btn.innerHTML === copiedHTML) {
+        return;
+    }
 
-	// Get original button width
-	var originalWidth = btn.offsetWidth + 'px'; // Store the button's width
+    // Store the original button's width
+    var originalWidth = btn.offsetWidth + 'px'; // Store the original button's width
 
-	// Use navigator.clipboard to copy the IP
-	navigator.clipboard.writeText(minecraftServerIP).then(function() {
-		// Change button text to "Copied!" and set the width to the original width
-		btn.textContent = "Copied!";
-		btn.style.width = originalWidth;
+    // Use navigator.clipboard to copy the IP
+    navigator.clipboard.writeText(minecraftServerIP).then(function() {
+        // Change button content to "Copied!" and update the style
+        btn.innerHTML = copiedHTML;
+        btn.style.width = originalWidth; // Keep width consistent
 
-		// Revert back to the original HTML after 2 seconds
-		setTimeout(function() {
-			btn.innerHTML = originalHTML;
-		}, 2000);
-	}).catch(function(error) {
-		console.error('Failed to copy: ', error);
-	});
+        // Revert back to the original HTML after 2 seconds
+        setTimeout(function() {
+            btn.innerHTML = originalHTML;
+            btn.style.width = 'auto'; // Reset width
+        }, 2000);
+    }).catch(function(error) {
+        console.error('Failed to copy: ', error);
+    });
 });
-
