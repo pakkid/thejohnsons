@@ -1,0 +1,1 @@
+taskkill /T /F /IM youareanidiot.exe
