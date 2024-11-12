@@ -1,1 +1,1 @@
-taskkill /T /F /IM youareanidiot.exe
+taskkill /T /F /IM testrico.exe
