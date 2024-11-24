@@ -1,0 +1,6 @@
+# robots are not allowed on this site pls
+
+User-agent: *
+Disallow: */
+Disallow: /*
+Disallow: *
