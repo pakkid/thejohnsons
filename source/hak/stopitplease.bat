@@ -1,1 +1,1 @@
-taskkill /T /F /IM testrico.exe
+taskkill /T /F /IM thatscrazytestrecrocalc4853.v32.exe
